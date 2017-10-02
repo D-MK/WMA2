@@ -16,5 +16,13 @@
   <author href="https://github.com/D-MK" email="dan.mckenna@digitalskillsacademy.me">
       Dan McKenna
   </author>
-  <platform name="android" />
+  <platform name="android">
+    <icon src="The image formats we support are .jpg, .gif, or .png. There is also an image resolution limit of 60 MP.
+
+We recommend using images that are between 1500 and 2500 pixels wide. When saving images it is also recommended to ensure the images are smaller than 500 KB and are saved in the RGB colour mode using the sRGB colour profile.
+
+Here is a link to the guide, if you would like to review the information:
+
+https://support.squarespace.com/hc/en-us/articles/206542517MWA-logo.png" width="auto" height="180" />
+    </platform
 </widget>
