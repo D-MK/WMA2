@@ -1,0 +1,35 @@
+<!--List-->
+<div class="list">
+  <div class="add">
+    <div>
+    <input id="inputToDo" ng-model="newToDo" type="text" name="input" placeholder="Tasks...">
+  </div>
+  <div>
+
+    <a href="" ng-Click="addToDo()"><img src="img/add.icons.svg" id="addIco" alt="Add task"/></a>
+
+  </div>
+
+  <ul>
+
+  <li class= "item" ng-class="{'editing-item': edit, 'edited':toDo.edited,'completed': toDo.completed}"
+  ng-repeat="toDo in toDos | orderBy: 'completed'" ng-init="toDo.completed= false">
+
+
+
+      <input ng-model="toDo.completed" type="checkbox"/>
+      <label ng-hide="edit" class="editing-label">{{toDo.name}}</label>
+      <input ng-blur="edit = false;" ng-show="edit" ng-model="toDo.name"class="editing-label" type="text"/>
+    </br>
+      <!--Controls -->
+      <div class="actions">
+        <!--toggle for editing -->
+          <a href="#" ng-hide="toDo.completed" ng-click="edit = !edit;">Edit</a>
+          <a href="#" ng-hide="!edit" ng-click="saveToDos(toDo)">Save</a>
+          <a href="#" ng-hide="edit" ng-click="deleteToDo(toDo , $index)" class="delete">Delete</a>
+      </div>
+
+  </li>
+</ul>
+</div> <!-- End Add Class div -->
+</div>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <title>MWA Assessment 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<!--Start Body -->
+<body ng-app="toDoList">
+  <div id="header">
+    <img class="logo" src="img/MWA-logo.png" alt="Assessment logo"/>
+  </div> <!-- End footer div-->
+
+  <div id="banner">
+  <h1>To Do:</h1>
+</div> <!-- End header div-->
+<div id="content">
+<!-- End Repeat div-->
+
+<to-dos></to-dos> <!--custom directives-->
+</div><!-- End content div-->
+<footer></footer>
+
+  <!--Include Angular -->
+  <script src="js/angular.min.js"></script>
+<!--
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.min.js"></script>
+-->
+    <script src="js/app.js"></script>
+    <script src="js/controllers/main.js"></script>
+    <script src="js/services/data.js"></script>
+    <script src="js/directives/toDos.js"></script>
+    <script src="js/directives/footer.js"></script>
+
+</body>
+
+
+</html>
