@@ -6,7 +6,7 @@
   </div>
   <div>
 
-    <a href="" ng-Click="addToDo()"><img src="img/add.icons.svg" id="addIco" alt="Add task"/></a>
+    <a href="" ng-Click="addToDo();"><img src="img/add.icons.svg" id="addIco" alt="Add task"/></a>
 
   </div>
 
@@ -18,15 +18,21 @@
 
 
       <input ng-model="toDo.completed" type="checkbox"/>
+      <!-- Hide Labe when editing-->
       <label ng-hide="edit" class="editing-label">{{toDo.name}}</label>
+      <!--Show Input when editing -->
       <input ng-blur="edit = false;" ng-show="edit" ng-model="toDo.name"class="editing-label" type="text"/>
     </br>
       <!--Controls -->
       <div class="actions">
         <!--toggle for editing -->
-          <a href="#" ng-hide="toDo.completed" ng-click="edit = !edit;">Edit</a>
-          <a href="#" ng-hide="!edit" ng-click="saveToDos(toDo)">Save</a>
-          <a href="#" ng-hide="edit" ng-click="deleteToDo(toDo , $index)" class="delete">Delete</a>
+          <a href="#" ng-hide="toDo.completed; edit" ng-click="edit = !edit;">Edit</a>
+          <!-- Hide Save button when not editing, click to Save
+          Additional editing toggle to ensure function of the button if no edit has been made
+        -->
+          <a href="#" ng-hide="!edit" ng-click="edit = !edit; saveToDos(toDo); ">Save</a>
+          <!--Delete ToDo based on Index position-->
+          <a href="#" ng-click="deleteToDo(toDo , $index)" class="delete">Delete</a>
       </div>
 
   </li>

@@ -31,8 +31,10 @@ angular.module("toDoList")
       if(to.edited){
         return todo;
       }
+
     })
     dataService.saveToDos(filteredToDos);
+
   }
 
 })

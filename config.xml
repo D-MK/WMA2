@@ -3,7 +3,7 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "dmk.phonegap.todo"
     versionCode = "1"
-    version     = "0.0.1" >
+    version     = "0.1.0" >
 
 <!-- versionCode is optional and Android only -->
 
@@ -17,6 +17,6 @@
       Dan McKenna
   </author>
   <platform name="android">
-    <icon src="img/MWA-logo.png" width="auto" height="180"></icon>
+    <icon src="img/mwa-logo-bg.png" width="auto" height="180"></icon>
   </platform>
 </widget>
