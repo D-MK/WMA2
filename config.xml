@@ -17,6 +17,6 @@
       Dan McKenna
   </author>
   <platform name="android">
-    <icon src="img/mwa-logo-bg.png" width="auto" height="180"></icon>
+    <icon src="img/mwa-logo-bg.png" width="180" height="180"></icon>
   </platform>
 </widget>
