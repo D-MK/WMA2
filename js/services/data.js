@@ -4,7 +4,7 @@ angular.module("toDoList")
 .service("dataService", function($http){
 
   this.getTodos = function(callback){
-          localStorage.getItem("task")
+          $http.get('data/todo.json')
                 .then(callback)
               };
 this.deleteToDo = function(toDo){
@@ -15,15 +15,15 @@ this.deleteToDo = function(toDo){
     console.log("the " + toDo.name +  " to do item has been saved")
   };
 });
-// Code reuse https://www.tutorialrepublic.com/html-tutorial/html5-web-storage.php
 
-/* Check if the localStorage object exists
+
+// Check if the localStorage object exists
 if(localStorage){
     // Store data
-    localStorage.setItem("first_name", "Peter");
+    localStorage.setItem("task", toDo.name);
 
     // Retrieve data
-    alert("Hi, " + localStorage.getItem("first_name"));
+    alert("Hi, " + localStorage.getItem("task"));
 } else{
     alert("Sorry, your browser do not support local storage.");
-}*/
+}
