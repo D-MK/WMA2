@@ -72,6 +72,10 @@ label{
   height:30px;
   width:auto;
 }
+p{
+  text-align: center;
+  color: #fff;
+}
 /* Styling for add task link which has been replaced by icon
   Keeping CSS for Alt text as backup for icon not loading
 */
@@ -145,7 +149,7 @@ body {
 
 #banner {
   background-color: #5982B7;
-  padding:0px;
+  padding-bottom:5px;
   margin: 0px;
   border: solid #000 1px;
   min-height:15vh;
