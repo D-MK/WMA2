@@ -153,9 +153,12 @@ body {
   margin: 0px;
   border: solid #000 1px;
   min-height:15vh;
-  max-height: 20vh;
+  max-height: 30vh;
   border-radius: 10px 10px 0px 0px;
+  overflow: auto;
+  display: block;
 }
+
 html{
   background-color: #68778c;
   padding:0px;
