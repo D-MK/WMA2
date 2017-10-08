@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "dmk.phonegap.todo"
+    versionCode = "1"
+    version     = "1.0.0" >
+
+  <name>Dan's To Do List</name>
+
+  <description>
+      WMA Assessment 2 - AngularJS
+  </description>
+
+  <author href="https://github.com/D-MK" email="dan.mckenna@digitalskillsacademy.me">
+      Dan McKenna
+  </author>
+    <preference name='phonegap-version' value='cli-6.5.0' />
+     <preference name="permissions" value="none"/>
+  <platform name="android">
+    <icon src="img/mwa-logo-bg.png" width="180" height="180"  gap:role="default" />
+  </platform>
+</widget>
