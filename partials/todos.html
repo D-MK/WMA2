@@ -11,13 +11,17 @@
   </div>
 
   <ul>
-
+<!-- Code Reuse
+Ref:
+https://stackoverflow.com/questions/16296670/angular-ng-repeat-error-duplicates-in-a-repeater-are-not-allowed
+track by $index to ensure no duplicate errors-->
   <li class= "item" ng-class="{'editing-item': edit, 'edited':toDo.edited,'completed': toDo.completed}"
-  ng-repeat="toDo in toDos | orderBy: 'completed'" ng-init="toDo.completed= false">
+  ng-repeat="toDo in toDos | orderBy: 'completed'; track by $index" ng-init="toDo.completed= false">
 
 
-
-      <input ng-model="toDo.completed" type="checkbox"/>
+      <!--Added saveToDos function to esnure completed state is saved
+      when pulling data from local storage -->
+      <input ng-model="toDo.completed" type="checkbox" ng-click=" saveToDos(toDo);"/>
       <!-- Hide Labe when editing-->
       <label ng-hide="edit" class="editing-label">{{toDo.name}}</label>
       <!--Show Input when editing -->
@@ -26,11 +30,11 @@
       <!--Controls -->
       <div class="actions">
         <!--toggle for editing -->
-          <a href="#" ng-hide="toDo.completed; edit" ng-click="edit = !edit;">Edit</a>
+          <a href="#" ng-hide="toDo.completed;" ng-click="edit = !edit;">Edit</a>
           <!-- Hide Save button when not editing, click to Save
           Additional editing toggle to ensure function of the button if no edit has been made
         -->
-          <a href="#" ng-hide="!edit" ng-click="edit = !edit; saveToDos(toDo); ">Save</a>
+          <a href="#" ng-hide="edit" ng-click=" saveToDos(toDo);">Save</a>
           <!--Delete ToDo based on Index position-->
           <a href="#" ng-click="deleteToDo(toDo , $index)" class="delete">Delete</a>
       </div>
