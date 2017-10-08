@@ -5,8 +5,6 @@
     versionCode = "1"
     version     = "1.0.0" >
 
-<!-- versionCode is optional and Android only -->
-
   <name>Dan's To Do List</name>
 
   <description>
@@ -17,6 +15,6 @@
       Dan McKenna
   </author>
   <platform name="android">
-    <icon src="img/mwa-logo-bg.png" width="180" height="180"  gap:role="default"></icon>
+    <icon src="/img/mwa-logo-bg.png" width="180" height="180"  gap:role="default"></icon>
   </platform>
 </widget>
